@@ -4,7 +4,7 @@
 </head>
 <body> 
 Name<input type="text" name="name"><br>
-Age<input type="int" name="age"><br>
+Age<input type="int" name="name"><br>
 Email<input type="text" name="email"><br>
 Password <input type="password" name="password"><br>
 <p> What would you like to experience? </p>
