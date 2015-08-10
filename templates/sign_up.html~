@@ -4,11 +4,15 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body> <form action="{{url_for('sign_up')}}" method='POST'>
-Name<input type="text" name="name"><br>
-Age<input type="text" name="age"><br>
-Email<input type="text" name="email"><br>
-Password <input type="password" name="password"><br>
+Name    <input type="text" name="name"><br>
+Age     <input type="text" name="age"><br>
+Email   <input type="text" name="email"><br>
+Password<input type="password" name="password"><br>
+Address <input type="text" name="address"><br>
 
+City:
+{% for city in cities %}
+<input type="radio" name="city_id" value="{{city.id}}">{{city.name}}
 <p id="p1"> What would you like to experience? </p>
 
 <input type="radio" name="the_experience" value="host">host<br>

@@ -18,6 +18,7 @@ class User(Base):
 	password = Column(String(30))
 	experience = Column(String(10))## either visit study or host
 	address = Column(String(70))
+	city_id = Column(Integer)
 
 class Trip(Base):
 	__tablename__ = 'trips'

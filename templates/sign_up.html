@@ -10,6 +10,9 @@ Email   <input type="text" name="email"><br>
 Password<input type="password" name="password"><br>
 Address <input type="text" name="address"><br>
 
+City:
+{% for city in cities %}
+<input type="radio" name="city_id" value="{{city.name}}">{{city.name}}
 <p id="p1"> What would you like to experience? </p>
 
 <input type="radio" name="the_experience" value="host">host<br>
