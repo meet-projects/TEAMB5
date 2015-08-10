@@ -3,42 +3,22 @@
 <h1 id="h"> SIGN UP FOR FREE NOW!</h1> 
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
-<body> <form action='{{url_for("sign_up")}}' method='POST'>
-Name<input type="text" name="name"><br>
-Age<input type="int" name="age"><br>
-Email<input type="text" name="email"><br>
-Password <input type="password" name="password"><br>
+<body> <form action="{{url_for('sign_up')}}" method='POST'>
+Name    <input type="text" name="name"><br>
+Age     <input type="text" name="age"><br>
+Email   <input type="text" name="email"><br>
+Password<input type="password" name="password"><br>
+Address <input type="text" name="address"><br>
 
-<p> What would you like to experience? </p>
+City:
+{% for city in cities %}
+<input type="radio" name="city_id" value="{{city.name}}">{{city.name}}
+<p id="p1"> What would you like to experience? </p>
 
 <input type="radio" name="the_experience" value="host">host<br>
-<input type="radio" name="the_experience" value="traveling">traveling<br>
-
-<p id="p1"> What would you like to experience? </p>
-<form>
-<input type="radio" name="the experience" value="host">host<br>
-<input type="radio" name="the experience" value="travelling">travelling<br>
-</form>
-<from>
-<p id="p1"> * if you chose 'travelling' what is your goal from the travelling?</p>
-<input type="radio" name="the experience" value="learn/study">learn/study<br>
-<input type="radio" name="the experience" value="visit">visit<br> <br>
-</form>
+<input type="radio" name="the_experience" value="study">study<br>
+<input type="radio" name="the_experience" value="visit">visit<br>
 <input type="submit" value="submit">
-
-
-
-<p> * if you chose 'travelling' what is your goal from the traveling?</p>
-<input type="radio" name="purpose" value="study">learn/study<br>
-<input type="radio" name="purpose" value="visit">visit<br> <br>
-
-<input type="submit" value="submit">
-
 </form>
-
-
-
-
-
 </body>
 </html>
