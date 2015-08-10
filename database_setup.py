@@ -1,6 +1,5 @@
 
 from sqlalchemy import Boolean, Column, Date, Float, ForeignKey, Integer, String
-=======
 from sqlalchemy import Column, Date, Float, ForeignKey, Integer, String, Boolean
 
 from sqlalchemy.ext.declarative import declarative_base

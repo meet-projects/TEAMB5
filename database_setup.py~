@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 from sqlalchemy import Boolean, Column, Date, Float, ForeignKey, Integer, String
 =======
 from sqlalchemy import Column, Date, Float, ForeignKey, Integer, String, Boolean
->>>>>>> 782756caed35274e2f6844b7539af5f09f0fa1e4
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
