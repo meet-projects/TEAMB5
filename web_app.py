@@ -21,6 +21,17 @@ def main():
 	##user = session.query(User).first()
 	##return render_template("main_page.html",user=user)
 
+@app.route('/aboutus')
+def about_us():
+    return render_template('about_us.html')
+
+@app.route('/login')
+def log_in():
+    return render_template('log_in.html')
+
+@app.route('/signup')
+def sign_up():
+    return render_template('sign_up.html')
 
 
 
