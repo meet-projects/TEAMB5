@@ -16,8 +16,8 @@ class User(Base):
 	age = Column(Integer)
 	email = Column(String(50))
 	password = Column(String(30))
-	traveler = Column(Boolean) ## True for traveler, False for host
-	study = Column(Boolean) ## True for study, False for visit
+	experience = Column(String(10))## either visit study or host
+	address = Column(String(70))
 
 class Trip(Base):
 	__tablename__ = 'trips'

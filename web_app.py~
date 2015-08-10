@@ -23,17 +23,33 @@ def main():
 
 @app.route('/aboutus')
 def about_us():
-    return render_template('about_us.html')
+	return render_template('about_us.html')
 
 @app.route('/login')
 def log_in():
-    return render_template('log_in.html')
+	if request.method=='GET':
+		return render_template('log_in.html')
+	else:
+		log_in_email = request.form['email']
+		log_in_password = request.form['password']
+		check_user=session.query(User).filter_by(email = log_in_email, password = log_in_password).first()
+		if check_user == None:
+			return render_template('wrong_user.html')
+		else:
+			return render_template('main_page.html')
+	
+@app.route('/destination')
+def destination():
+	if request.form=='POST':
+		return render_template('main_page.html')
+	return render_template('choose_destination.html')
 
 @app.route('/signup', methods=['GET','POST'])
 def sign_up():
 	if request.method=='GET':
 		return render_template('sign_up.html')
 	else:
+		print(request.form.keys())
 		new_name = request.form['name']
 		new_pass = request.form['password']
 		new_email = request.form['email']
