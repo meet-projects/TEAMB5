@@ -43,7 +43,7 @@ def destination():
 	cities = session.query(City).all()
 	return render_template('choose_destination.html', cities=cities)
 
-@app.route('/destination/<int:city_id>', methods=['POST'])
+@app.route('/destination/<int:city_id>', methods=['GET'])
 def select_destination(city_id):
 	if request.method=='GET':
 		hosts=session.query(User).filter_by(city_id = city_id, experience = 'host').all()
@@ -51,8 +51,9 @@ def select_destination(city_id):
 
 @app.route('/signup', methods=['GET','POST'])
 def sign_up():
+	cities=session.query(City).all()
 	if request.method=='GET':
-		return render_template('sign_up.html')
+		return render_template('sign_up.html', cities=cities)
 	else:
 		new_city_id = session.query(City).filter_by(name=request.form['city']).first().id
 		print(request.form.keys())
@@ -61,7 +62,8 @@ def sign_up():
 		new_email = request.form['email']
 		new_age = request.form['age']
 		new_exp = request.form['the_experience']
-		new_user = User(name = new_name, age = new_age, email = new_email, password = new_pass, experience = new_exp, city_id=new_city_id)
+		new_address = request.form['address']
+		new_user = User(name = new_name, age = new_age, email = new_email, password = new_pass, experience = new_exp, city_id=new_city_id, address=new_address)
 		session.add(new_user)
 		session.commit()
 		return redirect(url_for('main'))

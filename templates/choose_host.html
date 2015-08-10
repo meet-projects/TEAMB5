@@ -6,18 +6,27 @@
 <header>
 <h1 id="h">choose your Host</h1>
 <h2>the place of your dream trip</h2>
-{% for user in Users %}
-{% if user.experience=='host' %}
-{{user.name}}
-{{user.age}}
-{{user.email}}
-{{user.address}}
-{% endfor %}
 </header>
+<body>
+<table border=1>
+<tr><th colspan="4">Hosts in The requested City</th></tr>
+<tr><th>Name</th><th>age</th><th>Email</th><th>Address</th></tr>
+{% for user in hosts %}
+{% if user.experience=='host' %}
+<tr>
+<td>{{user.name}}</td>
+<td>{{user.age}}</td>
+<td>{{user.email}}</td>
+<td>{{user.address}}</td>
+</tr>
+{% endif %}
+{% endfor %}
+</table>
+
 
 </div>
 
-
+</body>
 
 
 </html>

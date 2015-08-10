@@ -12,7 +12,8 @@ Address <input type="text" name="address"><br>
 
 City:
 {% for city in cities %}
-<input type="radio" name="city_id" value="{{city.name}}">{{city.name}}
+<input type="radio" name="city" value="{{city.name}}">{{city.name}}
+{% endfor %}
 <p id="p1"> What would you like to experience? </p>
 
 <input type="radio" name="the_experience" value="host">host<br>
@@ -21,4 +22,5 @@ City:
 <input type="submit" value="submit">
 </form>
 </body>
+
 </html>
