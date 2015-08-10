@@ -22,7 +22,7 @@
 Choose Destination<br> 
 </div>
 <div id="uvp"> 
-<div id="C">COMBINE PEOPLE</div>,<div> EXPERIENCE CULTURE, </div> <div>AND LIVE THE DIFFERENCE</div>
+<div id="C">COMBINE PEOPLE,</div><div id="E"> EXPERIENCE CULTURE, </div> <div id="A">AND LIVE THE DIFFERENCE</div>
 <img id="img" src="{{url_for('static', filename='together.jpeg')}}"><br>
 <div class="img"><img  src="{{url_for('static', filename='nazareth.jpg')}}"></div>
 <div class="img"><img  src="{{url_for('static', filename='jerusalem.jpg')}}"></div>
