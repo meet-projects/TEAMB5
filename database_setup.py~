@@ -10,7 +10,7 @@ class User(Base):
 	__tablename__ = 'users'
 	id = Column(Integer, primary_key=True)
 	name = Column(String(30))
-	age = Column(Int(2))
+	age = Column(Integer)
 	email = Column(String(50))
 	password = Column(String(30))
 	traveler = Column(Boolean) ## True for traveler, False for host
