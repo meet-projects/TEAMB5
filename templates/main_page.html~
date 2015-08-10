@@ -11,11 +11,24 @@
 
 <body>
 
-<h1>HOSTMY</h1>
+<h1 id="h1">HOST ME</h1>
 
-<div id="menu" style="background-color:#FFD700;height:600px;width:1000px;float:left;text-align:center;border-color:#FF0000;border:20px">
-hhh
-<div/>
+<div id="menu" style="">
+<h2>menu</h2>
+<a href="{{url_for('main')}}">Home</a><br>
+<a href="{{url_for('about_us')}}">About Us</a><br> 
+<a href="{{url_for('log_in')}}">Log-in</a><br> 
+<a href="{{url_for('sign_up')}}">Sign-Up</a><br> 
+Choose Destination<br> 
+</div>
+<div id="uvp"> 
+<div id="C">COMBINE PEOPLE</div>,<div> EXPERIENCE CULTURE, </div> <div>AND LIVE THE DIFFERENCE</div>
+<img id="img" src="{{url_for('static', filename='together.jpeg')}}"><br>
+<div class="img"><img  src="{{url_for('static', filename='nazareth.jpg')}}"></div>
+<div class="img"><img  src="{{url_for('static', filename='jerusalem.jpg')}}"></div>
+<div class="img"><img  src="{{url_for('static', filename='telaviv.jpg')}}"></div>
+
+</div>
 
 </body>
 

@@ -1,11 +1,37 @@
 /* Add your CSS Code here */
 body {
- background-image: url("http://7-themes.com/data_images/out/38/6899522-dark-backgrounds.jpg");
- background-color:#E6E6E6;
+ background: url("http://socialgamecheats.net/wp-content/uploads/2014/02/Light-Blue-Planet-Powerpoint-Backgrounds.jpg") no-repeat center center fixed;
+background-size:cover;
  text-align:left;
  font-family:"ariel";
- font-size:20px;
- color: #85335C;
+ font-size:30px;
+ color: #FFFFFF;
 }
 #p1{color:#333333;}
-#h{color:#470024; font-family:"new garden";}
+#h1{text-align:center; color:#3366FF;}
+
+#menu {
+font-size: 50px;
+width: 500px;
+height: 1100px;
+position:relative;
+float:left;
+background-color:#B6E6FF;
+text-align:center;
+}
+
+#uvp{
+font-size: 60px;
+position:absolute;
+margin-left: 550px;
+width:1800px;
+height: 1100px;
+background-color:#B6E6FF;
+text-align: center;
+}
+#img{height:300px;}
+.img{height:300px;float:left; margin: 30px;}
+img { height: 300px;}
+#C{color: #3366FF;}
+#E{color: #4775FF;}
+#A {color:#5C85FF;}
