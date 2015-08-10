@@ -4,8 +4,8 @@ body {
 background-size:cover;
  text-align:left;
  font-family:"ariel";
- font-size:30px;
- color: #FFFFFF;
+ font-size:40px;
+ color: #000099;
 }
 #p1{color:#333333;}
 #h1{text-align:center; color:#3366FF;}
@@ -35,3 +35,4 @@ img { height: 300px;}
 #C{color: #3366FF;}
 #A{color: #85A3FF;}
 #E {color:#5C85FF;}
+
