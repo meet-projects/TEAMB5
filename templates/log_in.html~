@@ -1,29 +1,18 @@
+<!DOCTYPE html>
 <html>
 <head>
-<h1> LOG IN :) </h1> 
+<h1 id="h"> LOG IN :) </h1> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
 
-<body>
+<body id="login">
 <form>
 Name<input type="text" name="name"><br>
 Email<input type="text" name="email"><br>
 Password <input type="password" name="password"><br>
 <input type="submit" value="Log in">
 
-
-
-
-
 </body>
-
-
-
-
-
-
-
-
-
 
 </html>
 
