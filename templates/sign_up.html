@@ -3,24 +3,24 @@
 <h1> SIGN UP FOR FREE NOW!</h1> 
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
-<body> 
+<body> <form action='{{url_for("sign_up")}}' method='POST'>
 Name<input type="text" name="name"><br>
 Age<input type="int" name="age"><br>
 Email<input type="text" name="email"><br>
 Password <input type="password" name="password"><br>
 <p> What would you like to experience? </p>
-<form>
-<input type="radio" name="the experience" value="host">host<br>
-<input type="radio" name="the experience" value="travelling">travelling<br>
-</form>
-<from>
-<p> * if you chose 'travelling' what is your goal from the travelling?</p>
-<input type="radio" name="the experience" value="learn/study">learn/study<br>
-<input type="radio" name="the experience" value="visit">visit<br> <br>
-</form>
+
+<input type="radio" name="the_experience" value="host">host<br>
+<input type="radio" name="the_experience" value="traveling">traveling<br>
+
+
+<p> * if you chose 'travelling' what is your goal from the traveling?</p>
+<input type="radio" name="purpose" value="study">learn/study<br>
+<input type="radio" name="purpose" value="visit">visit<br> <br>
+
 <input type="submit" value="submit">
 
-
+</form>
 
 
 
