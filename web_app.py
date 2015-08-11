@@ -61,9 +61,12 @@ def sign_up():
 		new_pass = request.form['password']
 		new_email = request.form['email']
 		new_age = request.form['age']
-		new_exp = request.form['the_experience']
+		new_purposes = request.form.getlist('purposes')
+		new_study = "study" in new_purposes
+		new_visit = "visit" in new_purposes
+		new_host = "host" in new_purposes
 		new_address = request.form['address']
-		new_user = User(name = new_name, age = new_age, email = new_email, password = new_pass, experience = new_exp, city_id=new_city_id, address=new_address)
+		new_user = User(name = new_name, age = new_age, email = new_email, password = new_pass, study = new_study, visit = new_visit, host = new_host, city_id=new_city_id, address=new_address)
 		session.add(new_user)
 		session.commit()
 		return redirect(url_for('main'))
