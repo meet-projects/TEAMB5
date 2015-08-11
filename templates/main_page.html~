@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>
-    
-  </title>
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
-  
-  
+  <title>main page</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}"> 
 </head>
 
 <body>
@@ -19,13 +15,13 @@
 <a href="{{url_for('about_us')}}">About Us</a><br> 
 <a href="{{url_for('log_in')}}">Log-in</a><br> 
 <a href="{{url_for('sign_up')}}">Sign-Up</a><br> 
-<a href="{{url_for('main')}}">Choose Destination</a><br> 
+<a href="{{url_for('destination')}}">Choose Destination</a><br> 
 </div>
-<div id="uvp"> 
+<div id="uvp1"> 
 <div id="C">COMBINE PEOPLE,</div><div id="E"> EXPERIENCE CULTURE, </div> <div id="A">AND LIVE THE DIFFERENCE</div>
 <img id="img" src="{{url_for('static', filename='together.jpeg')}}"><br>
 <div class="img"><img  src="{{url_for('static', filename='nazareth.jpg')}}"></div>
-<div class="img"><img  src="{{url_for('static', filename='jerusalem.jpg')}}"></div>
+<div class="img"><img  src="{{url_for('static', filename='jerusalem.jpeg')}}"></div>
 <div class="img"><img  src="{{url_for('static', filename='telaviv.jpg')}}"></div>
 
 </div>

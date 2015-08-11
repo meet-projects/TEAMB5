@@ -16,7 +16,9 @@ class User(Base):
 	age = Column(Integer)
 	email = Column(String(50))
 	password = Column(String(30))
-	experience = Column(String(10))## either visit study or host
+	visit = Column(Boolean)
+	study = Column(Boolean)
+	host = Column(Boolean)
 	address = Column(String(70))
 	city_id = Column(Integer)
 

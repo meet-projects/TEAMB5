@@ -1,14 +1,15 @@
 /* Add your CSS Code here */
 body {
- background: url("http://socialgamecheats.net/wp-content/uploads/2014/02/Light-Blue-Planet-Powerpoint-Backgrounds.jpg") no-repeat center center fixed;
+ background: url("http://bgfons.com/upload/light_texture2227.jpg") no-repeat center center fixed;
 background-size:cover;
  text-align:left;
  font-family:"ariel";
- font-size:30px;
+ font-size:40px;
  color: #000099;
 }
 #p1{color:#333333;}
 #h1{text-align:center; color:#3366FF;}
+#h{ font-size: 60px;}
 
 #menu {
 font-size: 50px;
@@ -21,7 +22,7 @@ text-align:center;
 }
 
 #uvp{
-font-size: 60px;
+font-size: 40px;
 position:absolute;
 margin-left: 550px;
 width:1800px;
@@ -35,4 +36,5 @@ img { height: 300px;}
 #C{color: #3366FF;}
 #A{color: #85A3FF;}
 #E {color:#5C85FF;}
-#us{color:#000000;}
+
+
