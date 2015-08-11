@@ -1,0 +1,29 @@
+
+<html>
+<head>
+<h1 id="h"> Edit Profile</h1> 
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body> <form action="{{url_for('sign_up')}}" method='POST'>
+Name    <input type="text" name="name" value="{{person.name}}"><br>
+Age     <input type="text" name="age" value="{{person.age}}"><br>
+Email   <input type="text" name="email" value="{{person.email}}"><br>
+Password<input type="password" name="password" value="{{person.password}}"><br>
+Address <input type="text" name="address" value="{{person.address}}"><br>
+
+City:
+<input type="radio" name="city" value="{{city.name}}">
+Experience:
+<input type="checkbox" name="the_experience" value="host">host<br>
+<input type="checkbox" name="the_experience" value="study">study<br>
+<input type="checkbox" name="the_experience" value="visit">visit<br>
+<input type="submit" value="Edit">
+
+<table>
+<tr> <th> Destination:</th></tr>
+{% for trip in trips %}
+<tr> <td>{{trip.city.name}}</td></tr>
+{% endfor %}
+</form>
+</body>
+</html>

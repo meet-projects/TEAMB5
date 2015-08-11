@@ -18,14 +18,16 @@ class User(Base):
 	password = Column(String(30))
 	experience = Column(String(10))## either visit study or host
 	address = Column(String(70))
+	city_id = Column(Integer)
 
 class Trip(Base):
 	__tablename__ = 'trips'
 	id = Column(Integer, primary_key=True)
-	traveler_id = Column(Integer)
-	destination_id = Column(Integer)
-	departure = Column(Date) ##date of leaving original country
-	arrival = Column(Date) ##date of arriving at original country
+	host_id = Relationship(User)
+	traveler_id = Relationship(User)
+	destination_id = Relationship(City)
+	##departure = Column(Date) ##date of leaving original country
+	##arrival = Column(Date) ##date of arriving at original country
 
 class City(Base):
 	__tablename__ = 'cities'

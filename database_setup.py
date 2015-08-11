@@ -23,10 +23,16 @@ class User(Base):
 class Trip(Base):
 	__tablename__ = 'trips'
 	id = Column(Integer, primary_key=True)
-	traveler_id = Column(Integer)
-	destination_id = Column(Integer)
-	departure = Column(Date) ##date of leaving original country
-	arrival = Column(Date) ##date of arriving at original country
+	host_id = Column(Integer, ForeignKey("users.id"))
+	host = relationship("users")
+	visitor_id = = Column(Integer, ForeignKey("users.id"))
+	visitor = relationship("users")
+	studier_id = = Column(Integer, ForeignKey("users.id"))
+	study = relationship("users")
+	destination_id = Column(Integer, ForeignKey("cities.id"))
+	destination = relationship("cities")
+	##departure = Column(Date) ##date of leaving original country
+	##arrival = Column(Date) ##date of arriving at original country
 
 class City(Base):
 	__tablename__ = 'cities'
