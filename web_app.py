@@ -49,7 +49,7 @@ def destination():
 def wrong_user():
 	return render_template('wrong_user.html')
 
-@app.route('/destination/<int:city_id>', methods=['GET','POST'])
+@app.route('/destination/<int:city_id>', methods=['GET','POST	'])
 def select_host(city_id):
 	if request.method=='GET':
 		hosts=session.query(User).filter_by(city_id = city_id, host = True).all()
@@ -102,7 +102,7 @@ def sign_up():
 			host = new_host, study = new_study, visit = new_visit, city_id=new_city_id, address=new_address)
 		session.add(new_user)
 		session.commit()
-		return redirect(url_for('main'))
+		return redirect(url_for('log_in'))
 
 
 if __name__ == '__main__':

@@ -17,7 +17,7 @@
 <a href="{{url_for('sign_up')}}">Sign-Up</a><br> 
 <a href="{{url_for('destination')}}">Choose Destination</a><br> 
 </div>
-<div id="uvp1"> 
+<div id="uvp"> 
 <div id="C">COMBINE PEOPLE,</div><div id="E"> EXPERIENCE CULTURE, </div> <div id="A">AND LIVE THE DIFFERENCE</div>
 <img id="img" src="{{url_for('static', filename='together.jpeg')}}"><br>
 <div class="img"><img  src="{{url_for('static', filename='nazareth.jpg')}}"></div>

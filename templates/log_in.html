@@ -11,15 +11,17 @@
 <a href="{{url_for('about_us')}}">About Us</a><br> 
 <a href="{{url_for('log_in')}}">Log-in</a><br> 
 <a href="{{url_for('sign_up')}}">Sign-Up</a><br> 
-<a href="{{url_for('destination')}}">Choose Destination</a><br> 
+<a href="{{url_for('destination')}}">Choose Destination</a><br>
+<a href="{{url_for('log_in')}}">Sign-Out</a><br>  
 </div>
 <div id="uvp"> 
+
 <form method='POST' action='{{url_for("log_in")}}'>
-Name<input type="text" name="name"><br>
-Email<input type="text" name="email"><br>
-Password <input type="password" name="password"><br>
-<input type="submit" value="Log in">
-</form>
+Name<input class="loginbox" type="text" name="name"><br><br>
+Email<input class="loginbox" type="text" name="email"><br><br>
+Password <input class="loginbox" type="password" name="password"><br><br>
+<input id="submitloginbox" type="submit" value="Log in">
+
 </div> 
 </body>
 
