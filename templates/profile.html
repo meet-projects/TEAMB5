@@ -4,7 +4,20 @@
 <h1 id="h"> Edit Profile</h1> 
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
-<body> <form action="{{url_for('sign_up')}}" method='POST'>
+<body>
+<div id="menu" >
+<h2>menu</h2>
+<a href="{{url_for('main')}}">Home</a><br>
+<a href="{{url_for('about_us')}}">About Us</a><br> 
+<a href="{{url_for('sign_up')}}">Sign-Up</a><br>
+<a href="{{url_for('log_in')}}">Log-in</a><br> 
+<a href="{{url_for('profile')}}">Edit your profile</a><br>  
+<a href="{{url_for('destination')}}">Choose Destination</a><br>
+<a href="{{url_for('log_in')}}">Sign-Out</a><br>
+</div>
+<div id="uvp">
+<h2> Edit Profile </h2>  
+<form action="{{url_for('sign_up')}}" method='POST'>
 Name    <input id="loginbox" type="text" name="name" value="{{my_user.name}}"><br>
 Age     <input id="loginbox" type="text" name="age" value="{{my_user.age}}"><br>
 Email   <input id="loginbox" type="text" name="email" value="{{my_user.email}}"><br>
@@ -13,16 +26,16 @@ Address <input id="loginbox" type="text" name="address" value="{{my_user.address
 
 City:
 {% for city in cities %}
-<input type="radio" name="city" value="{{my_user.city.name}}">{{city.name}}<br>
-{% endfor %}
-Experience:
+<input type="radio" name="city" value="{{my_user.city.name}}">{{my_user.city.name}}<br>
+{% endfor %}<br>
+Experience:<br>
 <input type="checkbox" name="the_experience" value="host">host<br>
 <input type="checkbox" name="the_experience" value="study">study<br>
 <input type="checkbox" name="the_experience" value="visit">visit<br>
 <input id="submitloginbox" type="submit" value="Edit">
 
 {% if my_trips %}
-<table border=2>
+<table id="table" border=2>
 <tr> <th> destination:</th><th>host:</th></tr>
 {% for trip in my_trips %}
 <tr> <td>{{trip.destination.name}}</td><td>{{trip.host.name}}</td></tr>
@@ -30,7 +43,7 @@ Experience:
 </table>
 {% endif %}
 {% if my_hosted_trips %}
-<table border=2>
+<table  id="table" border=2>
 	<tr><th>traveler:</th></tr>
 	{% for trip in my_hosted_trips %}
 	<tr><td>{{trip.visitor.name}}</td></tr>
@@ -38,5 +51,6 @@ Experience:
 </table>
 {% endif %}
 </form>
+</div>
 </body>
 </html>

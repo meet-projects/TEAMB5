@@ -49,7 +49,7 @@ def destination():
 def wrong_user():
 	return render_template('wrong_user.html')
 
-@app.route('/destination/<int:city_id>', methods=['GET','POST	'])
+@app.route('/destination/<int:city_id>', methods=['GET','POST'])
 def select_host(city_id):
 	if request.method=='GET':
 		hosts=session.query(User).filter_by(city_id = city_id, host = True).all()
