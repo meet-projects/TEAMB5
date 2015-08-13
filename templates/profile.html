@@ -5,25 +5,36 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body> <form action="{{url_for('sign_up')}}" method='POST'>
-Name    <input type="text" name="name" value="{{person.name}}"><br>
-Age     <input type="text" name="age" value="{{person.age}}"><br>
-Email   <input type="text" name="email" value="{{person.email}}"><br>
-Password<input type="password" name="password" value="{{person.password}}"><br>
-Address <input type="text" name="address" value="{{person.address}}"><br>
+Name    <input type="text" name="name" value="{{my_user.name}}"><br>
+Age     <input type="text" name="age" value="{{my_user.age}}"><br>
+Email   <input type="text" name="email" value="{{my_user.email}}"><br>
+Password<input type="password" name="password" value="{{my_user.password}}"><br>
+Address <input type="text" name="address" value="{{my_user.address}}"><br>
 
 City:
-<input type="radio" name="city" value="{{city.name}}">
+<input type="radio" name="city" value="{{my_user.city.name}}">
 Experience:
 <input type="checkbox" name="the_experience" value="host">host<br>
 <input type="checkbox" name="the_experience" value="study">study<br>
 <input type="checkbox" name="the_experience" value="visit">visit<br>
 <input type="submit" value="Edit">
 
-<table>
-<tr> <th> Destination:</th></tr>
-{% for trip in trips %}
-<tr> <td>{{trip.city.name}}</td></tr>
+{% if my_trips %}
+<table border=2>
+<tr> <th> destination:</th><th>host:</th></tr>
+{% for trip in my_trips %}
+<tr> <td>{{trip.destination.name}}</td><td>{{trip.host.name}}</td></tr>
 {% endfor %}
+</table>
+{% endif %}
+{% if my_hosted_trips %}
+<table border=2>
+	<tr><th>traveler:</th></tr>
+	{% for trip in my_hosted_trips %}
+	<tr><td>{{trip.visitor.name}}</td></tr>
+	{% endfor %}
+</table>
+{% endif %}
 </form>
 </body>
 </html>

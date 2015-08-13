@@ -12,12 +12,16 @@
 <tr><th colspan="4">Hosts in The requested City</th></tr>
 <tr><th>Name</th><th>age</th><th>Email</th><th>Address</th></tr>
 {% for user in hosts %}
-{% if user.experience=='host' %}
+{% if user.host==True %}
 <tr>
 <td>{{user.name}}</td>
 <td>{{user.age}}</td>
 <td>{{user.email}}</td>
 <td>{{user.address}}</td>
+<td> <form method="POST" action="{{url_for('select_host', city_id = city_id)}}">
+	<input type= 'hidden' name = 'host_id' value ={{user.id}}>
+	<input type = 'submit' value = 'choose {{user.name}}'>
+</form>
 </tr>
 {% endif %}
 {% endfor %}

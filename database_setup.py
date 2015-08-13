@@ -20,21 +20,9 @@ class User(Base):
 	study = Column(Boolean)
 	host = Column(Boolean)
 	address = Column(String(70))
-	city_id = Column(Integer)
+	city_id = Column(Integer, ForeignKey("cities.id"))
+	city = relationship("City", foreign_keys=[city_id])
 
-class Trip(Base):
-	__tablename__ = 'trips'
-	id = Column(Integer, primary_key=True)
-	host_id = Column(Integer, ForeignKey("users.id"))
-	host = relationship("users")
-	visitor_id =  Column(Integer, ForeignKey("users.id"))
-	visitor = relationship("users")
-	studier_id =  Column(Integer, ForeignKey("users.id"))
-	study = relationship("users")
-	destination_id = Column(Integer, ForeignKey("cities.id"))
-	destination = relationship("cities")
-	##departure = Column(Date) ##date of leaving original country
-	##arrival = Column(Date) ##date of arriving at original country
 
 class City(Base):
 	__tablename__ = 'cities'
@@ -44,3 +32,15 @@ class City(Base):
 	photo = Column(String)
 
 
+
+class Trip(Base):
+	__tablename__ = 'trips'
+	id = Column(Integer, primary_key=True)
+	host_id = Column(Integer, ForeignKey("users.id"))
+	host = relationship("User", foreign_keys=[host_id])
+	visitor_id =  Column(Integer, ForeignKey("users.id"))
+	visitor = relationship("User", foreign_keys=[visitor_id])
+	destination_id = Column(Integer, ForeignKey("cities.id"))
+	destination = relationship(City)
+	##departure = Column(Date) ##date of leaving original country
+	##arrival = Column(Date) ##date of arriving at original country
