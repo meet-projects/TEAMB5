@@ -14,7 +14,7 @@
 <img class = "destination_image" src = "{{ url_for('static', filename=city.photo) }}" alt = "picture of the city">
 <h4>{{ city.name }}</h4>
 {{ city.num_of_visitors }}
-<input type="submit" id="choose_dest" value="I want to visit this location">
+<input id="city" type="submit" id="choose_dest" value="I want to visit this location">
 </div>
 </form>
 {% endfor %}

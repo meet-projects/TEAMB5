@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body> 
-<div id="menu" style="">
+<div id="menu" >
 <h2>menu</h2>
 <a href="{{url_for('main')}}">Home</a><br>
 <a href="{{url_for('about_us')}}">About Us</a><br> 
@@ -14,11 +14,11 @@
 </div>
 <div id="uvp"> 
 <form action="{{url_for('sign_up')}}" method='POST'>
-Name    <input type="text" name="name"><br>
-Age     <input type="text" name="age"><br>
-Email   <input type="text" name="email"><br>
-Password<input type="password" name="password"><br>
-Address <input type="text" name="address"><br>
+Name    <input id="loginbox" type="text" name="name"><br>
+Age     <input id="loginbox" type="text" name="age"><br>
+Email   <input id="loginbox" type="text" name="email"><br>
+Password<input id="loginbox" type="password" name="password"><br>
+Address <input id="loginbox" type="text" name="address"><br>
 
 City:
 {% for city in cities %}
@@ -29,7 +29,7 @@ City:
 <input type="checkbox" name="purposes" value="host">host<br>
 <input type="checkbox" name="purposes" value="study">study<br>
 <input type="checkbox" name="purposes" value="visit">visit<br>
-<input type="submit" value="submit">
+<input  id="submitloginbox" type="submit" value="submit">
 </form>
 </div>
 </body>

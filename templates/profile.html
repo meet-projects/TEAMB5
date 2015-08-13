@@ -5,19 +5,21 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body> <form action="{{url_for('sign_up')}}" method='POST'>
-Name    <input type="text" name="name" value="{{my_user.name}}"><br>
-Age     <input type="text" name="age" value="{{my_user.age}}"><br>
-Email   <input type="text" name="email" value="{{my_user.email}}"><br>
-Password<input type="password" name="password" value="{{my_user.password}}"><br>
-Address <input type="text" name="address" value="{{my_user.address}}"><br>
+Name    <input id="loginbox" type="text" name="name" value="{{my_user.name}}"><br>
+Age     <input id="loginbox" type="text" name="age" value="{{my_user.age}}"><br>
+Email   <input id="loginbox" type="text" name="email" value="{{my_user.email}}"><br>
+Password<input id="loginbox" type="password" name="password" value="{{my_user.password}}"><br>
+Address <input id="loginbox" type="text" name="address" value="{{my_user.address}}"><br>
 
 City:
-<input type="radio" name="city" value="{{my_user.city.name}}">
+{% for city in cities %}
+<input type="radio" name="city" value="{{my_user.city.name}}">{{city.name}}<br>
+{% endfor %}
 Experience:
 <input type="checkbox" name="the_experience" value="host">host<br>
 <input type="checkbox" name="the_experience" value="study">study<br>
 <input type="checkbox" name="the_experience" value="visit">visit<br>
-<input type="submit" value="Edit">
+<input id="submitloginbox" type="submit" value="Edit">
 
 {% if my_trips %}
 <table border=2>

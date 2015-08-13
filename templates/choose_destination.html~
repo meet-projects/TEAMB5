@@ -8,13 +8,13 @@
 <h2>the place of your dream trip</h2>
 </header>
 {% for city in cities %}
-<form action="{{url_for ('select_destination', city_id = city.id)}}>
+<form action="{{url_for ('select_host', city_id = city.id)}}">
 
 <div class = "destination_window">
 <img class = "destination_image" src = "{{ url_for('static', filename=city.photo) }}" alt = "picture of the city">
 <h4>{{ city.name }}</h4>
 {{ city.num_of_visitors }}
-<input type="submit" id="choose_dest" value="I want to visit this location">
+<input id="submitloginbox" type="submit" id="choose_dest" value="I want to visit this location">
 </div>
 </form>
 {% endfor %}
