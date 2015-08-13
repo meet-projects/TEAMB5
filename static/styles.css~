@@ -1,6 +1,6 @@
 /* Add your CSS Code here */
 body {
- background: url("http://bgfons.com/upload/light_texture2227.jpg") no-repeat center center fixed;
+ background: url("http://socialgamecheats.net/wp-content/uploads/2014/02/Light-Blue-Planet-Powerpoint-Backgrounds.jpg") no-repeat center center fixed;
 background-size:cover;
  text-align:left;
  font-family:"ariel";
@@ -36,5 +36,20 @@ img { height: 300px;}
 #C{color: #3366FF;}
 #A{color: #85A3FF;}
 #E {color:#5C85FF;}
+
+#loginbox
+{
+    height:40px;
+    width: 400px;
+    font-size:40px;
+}
+
+#submitloginbox
+{ 
+    height:50px;
+    width: 400px;
+    font-size:40px;
+}
+
 
 

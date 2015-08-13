@@ -5,12 +5,22 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body id="login">
+<div id="menu">
+<h2>menu</h2>
+<a href="{{url_for('main')}}">Home</a><br>
+<a href="{{url_for('about_us')}}">About Us</a><br> 
+<a href="{{url_for('log_in')}}">Log-in</a><br> 
+<a href="{{url_for('sign_up')}}">Sign-Up</a><br> 
+<a href="{{url_for('destination')}}">Choose Destination</a><br> 
+</div>
+<div id="uvp"> 
 <form>
-Name<input type="text" name="name"><br>
-Email<input type="text" name="email"><br>
-Password <input type="password" name="password"><br>
-<input type="submit" value="Log in">
+Name<input id="loginbox" type="text" name="name"><br><br>
+Email<input id="loginbox" type="text" name="email"><br><br>
+Password <input id="loginbox" type="password" name="password"><br><br>
+<input id="submitloginbox" type="submit" value="Log in">
 </form>
+</div> 
 </body>
 
 </html>

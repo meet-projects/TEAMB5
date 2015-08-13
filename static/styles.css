@@ -37,4 +37,19 @@ img { height: 300px;}
 #A{color: #85A3FF;}
 #E {color:#5C85FF;}
 
+#loginbox
+{
+    height:40px;
+    width: 400px;
+    font-size:40px;
+}
+
+#submitloginbox
+{ 
+    height:70px;
+    width: 400px;
+    font-size:40px;
+}
+
+
 
